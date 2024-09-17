@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #3c3c3c;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3; /* Ensure header is above sidebar contents */
+}
+
+h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.logo {
+  position: absolute;
+  top: 50px; /* Adjust as needed */
+  left: 40px; /* Adjust as needed */
+}
+
+.logo h1 {
+  font-family: 'sprite graffiti shadow', sans-serif;
+  font-size: 70px;
+  color: #ebebeb;
+}
+
+.line {
+  border-left: 2px solid #ebebeb;  /* Solid line with color */
+  opacity: 0.5;
+  height: 100vh;  /* Full height of the viewport */
+  position: absolute;
+  left: 90%;
+  margin-left: -1px;  /* Half of the border width to center the line */
+  top: 0;
+}
+
+.rectangle {
+  height: 200px;
+  width: 30px;
+  border-radius: 30px;
+  border-style: solid;
+  background-color: #ebebeb;
+  border-color: #ebebeb;
+  position: absolute;
+  left: 90%;  /* Align with the line */
+  margin-left: -16px;  /* Half the width of the rectangle minus half the border width of the line */
+  top: 300px;
+}
+
+.rectangle1 {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  border-style: solid;
+  background-color: #6d3434;
+  border-color: #6d3434;
+  position: absolute;
+  left: 90%;
+  margin-left: -16px;
+  top: calc(300px + 60px); /* Position below .rectangle */
+}
+
+.rectangle1 p {
+  display: none;
+  position: absolute;
+  left: -150px; /* Adjust to position the text to the left of .rectangle1 */
+  top: 0;
+  width: 140px; /* Adjust as needed */
+  background-color: #6d3434; /* Same background color as .rectangle1 */
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.rectangle1:hover p {
+  display: block;
+}
+
+
+.rectangle, .rectangle1, .rectangle2 {
+  left: 90%;  /* Align with the line */
+  margin-left: -16px;  /* Half the width of the rectangle minus half the border width of the line */
+
+}
+
+
+.rectangle2 {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  border-style: solid;
+  background-color: #2a1919;
+  border-color: #2a1919;
+  position: absolute;
+  top: calc(300px + 110px);/*  Position above .rectangle */
+}
+
+
+
+
+@font-face {
+  font-family: 'Sky';
+  src: url('fonts/Sky.otf') format('opentype');
+}
+
+.Intro {
+  font-family: 'Sky', sans-serif; /* Fallback to sans-serif if the font fails to load */
+  font-size: 30px;
+  margin-top: 100px;
+  text-align: center;
+  position: relative;
+  top: 200px;
+  left: 0;
+  width: 100%;
+  z-index: 3; /* Ensure header is above sidebar contents */
+  color: #ebebeb;
+}
+
+.Intro h2 {
+  font-weight: 500;
+}
+
+
+
+
+
+
+.main-content {
+  padding-top: 180px; /* Adjusted for header height */
+  margin-left: 220px; /* Adjusted to create space for sidebar */
+  margin-bottom: 60px; /* Added bottom margin */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@keyframes rainbow {
+  0% { color: red; }
+  100% { color: black}
+}
+
+.rainbow-text {
+  animation: rainbow 2s linear infinite; /* Adjust the duration as needed */
+}
+
+@keyframes logo {
+  0% { color: white; }
+  64% { color: blue; }
+  80% { color: indigo; }
+  100% { color: violet; }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .Intro {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  .Intro {
+    font-size: 24px;
+    top: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Intro {
+    font-size: 20px;
+    top: 100px;
+  }
+
+  .rectangle {
+    top: 400px; /* Adjust the position based on screen size */
+  }
+
+  .options {
+    margin-top: 150px;
+  }
+
+  .logo {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Intro {
+    font-size: 16px;
+    top: 80px;
+  }
+
+  .rectangle {
+    top: 450px;
+  }
+}
